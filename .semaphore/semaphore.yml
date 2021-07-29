@@ -70,8 +70,14 @@ blocks:
             - go test ./...
 promotions:
   - name: Stage users
-    pipeline_file: pipeline_2.yml
+    pipeline_file: pipeline_3.yml
+    auto_promote:
+      when: ' result = ''passed'''
   - name: Stage billing
-    pipeline_file: pipeline_2.yml
+    pipeline_file: pipeline_4.yml
+    auto_promote:
+      when: result = 'passed'
   - name: Stage ui
-    pipeline_file: pipeline_2.yml
+    pipeline_file: pipeline_5.yml
+    auto_promote:
+      when: result = 'passed'

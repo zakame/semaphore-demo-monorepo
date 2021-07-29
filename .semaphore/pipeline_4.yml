@@ -1,5 +1,5 @@
 version: v1.0
-name: Pipeline 5
+name: Stage billing
 agent:
   machine:
     type: e1-standard-2
@@ -11,3 +11,8 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "job 1"
+promotions:
+  - name: Deploy billing
+    pipeline_file: pipeline_7.yml
+    auto_promote:
+      when: result = 'passed'
