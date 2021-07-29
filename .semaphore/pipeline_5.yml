@@ -1,5 +1,5 @@
 version: v1.0
-name: Pipeline 5
+name: Stage ui
 agent:
   machine:
     type: e1-standard-2
@@ -11,3 +11,8 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "job 1"
+promotions:
+  - name: Deploy ui
+    pipeline_file: pipeline_9.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'
