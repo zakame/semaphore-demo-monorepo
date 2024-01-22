@@ -77,6 +77,7 @@ func Initialize() {
 }
 
 func main() {
+	fmt.Println("Starting the billing service")
 	Initialize()
 
 	loggedRouter := handlers.LoggingHandler(os.Stdout, Router)
