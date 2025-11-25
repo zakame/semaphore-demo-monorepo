@@ -16,7 +16,7 @@ blocks:
           os_image: ''
         containers:
         - name: main
-          image: semaphoreci/elixir:1.9
+          image: zakame-semaphore/elixir:1.9
 
       prologue:
         commands:
@@ -48,7 +48,7 @@ blocks:
           os_image: ''
         containers:
         - name: main
-          image: semaphoreci/ruby:2.7
+          image: zakame-semaphore/ruby:2.7
 
       prologue:
         commands:
@@ -78,7 +78,7 @@ blocks:
           os_image: ''
         containers:
         - name: main
-          image: semaphoreci/golang:1.14
+          image: zakame-semaphore/golang:1.14
 
       prologue:
         commands:
