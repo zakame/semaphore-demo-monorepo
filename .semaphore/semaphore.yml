@@ -16,7 +16,9 @@ blocks:
           os_image: ''
         containers:
         - name: main
-          image: zakame-semaphore/elixir:1.17
+          image: 252481841921.dkr.ecr.ap-southeast-1.amazonaws.com/semaphoreci/elixir:1.17
+        image_pull_secrets:
+          - name: ecr-pull
 
       prologue:
         commands:
@@ -46,7 +48,9 @@ blocks:
           os_image: ''
         containers:
         - name: main
-          image: zakame-semaphore/ruby:2.7
+          image: 252481841921.dkr.ecr.ap-southeast-1.amazonaws.com/semaphoreci/ruby:2.7
+        image_pull_secrets:
+          - name: ecr-pull
 
       prologue:
         commands:
@@ -73,7 +77,9 @@ blocks:
           os_image: ''
         containers:
         - name: main
-          image: zakame-semaphore/golang:1.22
+          image: 252481841921.dkr.ecr.ap-southeast-1.amazonaws.com/semaphoreci/golang:1.22
+        image_pull_secrets:
+          - name: ecr-pull
 
       prologue:
         commands:
